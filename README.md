@@ -14,4 +14,8 @@ We've constructed a basic HTML to-do list app (based on Mozilla's example), but 
 
 ## 3 - Algorithm Design
 
-There's a conceptual algorithm problem in the following
+There's a conceptual algorithm problem in the Algorithm directory. Feel free to solve this with any language of your choice.  The goal here is to understand how you think through problem solving situations.
+
+### Feedback
+
+Feel free to include any feedback you have about the test in the comment sections of the PRs that you submit. 
