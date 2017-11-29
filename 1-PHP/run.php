@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 namespace Havenly;
 require('./UserInfo.php');
 
-// Here is the list of users that we want to retrieve. 
+// Here is the list of users that we want to retrieve.
 $users = [
   [
     'name' => 'Thor',
@@ -25,13 +25,15 @@ $users = [
 $userInfo = new \UserInfo($users);
 
 // Here's an example to get you started.
-var_dump($userInfo->getAllUserNames());
+print_r($userInfo->getAllUserNames());
 
 // There are three types of functions to create in this gmp_testbit
-// 1. Validate that you can get the existing information you need 
-var_dump('Odin is currently in: '. $userInfo->getLocation('Odin')); // Should equal "Norway"
-// 1.5 Get the specific time information from a DateTime Object. 
-var_dump('Thor was born on : ' . $userInfo->getBirthDay('Thor')); // Should equal 'March 19, 1200'
+// 1. Validate that you can get the existing information you need
+echo'Odin is currently in: '. $userInfo->getLocation('Odin'); // Should equal "Norway"
+echo PHP_EOL;
+// 1.5 Get the specific time information from a DateTime Object.
+echo 'Thor was born on : ' . $userInfo->getBirthDay('Thor'); // Should be March 19, 1200
+echo PHP_EOL;
 
 $newUser = [
     'name' => 'Hela',
@@ -39,10 +41,10 @@ $newUser = [
     'birtday' => new \DateTime('5/5/1100', new \DateTimeZone('UTC')),
 ];
 
-// 2. Validate that you can add a new user 
+// 2. Validate that you can add a new user
 // and then retrieve existing information
 $userInfo->addUser($newUser);
-var_dump($userInfo->getAllUserNames()); // ['Thor', 'Odin', 'Loki', 'Hela']
+print_r($userInfo->getAllUserNames()); // ['Thor', 'Odin', 'Loki', 'Hela']
 
 
 // 3 BONUS. Validate that you can modifiy user information
@@ -50,5 +52,6 @@ var_dump($userInfo->getAllUserNames()); // ['Thor', 'Odin', 'Loki', 'Hela']
 // http://php.net/manual/en/language.operators.assignment.php
 // And that it properly saves
 $userInfo->setNewLocation('Loki', 'Spain');
-var_dump($userInfo->getLocation('Loki'));
+print_r($userInfo->getLocation('Loki'));
+echo PHP_EOL;
 

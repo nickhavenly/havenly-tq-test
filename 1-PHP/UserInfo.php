@@ -1,49 +1,68 @@
-<?php 
+<?php
 
-class UserInfo {
-  protected $users;
-  
-  public function __construct($users)
-  {
-    $this->users = $users;
-  }
-  
-  public function getAllUserNames()
-  {
-    $userNames = [];
-    
-    foreach ($this->users as $user) {
-      $userNames[] = $user['name'];
+class UserInfo
+{
+    const DATE_FORMAT = 'F n, Y';
+
+    /**
+     * @var array
+     */
+    protected $users = [];
+
+    /**
+     * UserInfo constructor.
+     *
+     * @param array $users
+     */
+    public function __construct(array $users)
+    {
+        foreach ($users as $user) {
+            $this->users[$user['name']] = $user;
+        }
     }
-    
-    return $userNames;
-  }
-  
-  // Returns Formatted String
-  public function getBirthDay($name)
-  {
-    /* 
-      Here's some documentation to get you started
-      http://php.net/manual/en/class.datetime.php
-    */
-  }
-  
-  // Returns Location String
-  public function getLocation($name)
-  {
 
-  }  
-  
-  //Adds user to the current set of users 
-  // Returns null
-  public function addUser($newUser)
-  {
+    /**
+     * @return array
+     */
+    public function getAllUserNames()
+    {
+        // TODO: implement
+    }
 
-  }
-    
-  // Finds the correct user and sets them to the 
-  public function setNewLocation($userName, $newLocation)
-  {
+    /**
+     * @param string $name
+     *
+     * @return null|string
+     */
+    public function getBirthDay($name)
+    {
+        // TODO: implement
+    }
 
-  }
+    /**
+     * @param string $name
+     *
+     * @return string|null
+     */
+    public function getLocation($name)
+    {
+        // TODO: implement
+    }
+
+    /**
+     * @param $newUser
+     */
+    public function addUser($newUser)
+    {
+        // TODO: implement
+    }
+
+    /**
+     * @param $userName
+     * @param $newLocation
+     */
+    public function setNewLocation($userName, $newLocation)
+    {
+        // TODO: implement
+    }
 }
