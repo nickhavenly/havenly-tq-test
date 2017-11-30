@@ -1,7 +1,7 @@
 <?php
 
 namespace Havenly;
-require('./UserInfo.php');
+require('./UsersInfo.php');
 
 // Here is the list of users that we want to retrieve.
 $users = [
@@ -22,36 +22,36 @@ $users = [
   ]
 ];
 
-$userInfo = new \UserInfo($users);
+$usersInfo = new \UsersInfo($users);
 
-// Here's an example to get you started.
-print_r($userInfo->getAllUserNames());
-
-// There are three types of functions to create in this gmp_testbit
-// 1. Validate that you can get the existing information you need
-echo'Odin is currently in: '. $userInfo->getLocation('Odin'); // Should equal "Norway"
-echo PHP_EOL;
-// 1.5 Get the specific time information from a DateTime Object.
-echo 'Thor was born on : ' . $userInfo->getBirthDay('Thor'); // Should be March 19, 1200
+// 1. Get All User Names
+echo '-------Names--------' . PHP_EOL;
+print_r($usersInfo->getAllUserNames()); // ['Thor', 'Odin', 'Loki']
 echo PHP_EOL;
 
+// 2. Validate that you can get the existing information you need
+echo '-------Location--------' . PHP_EOL;
+echo'Odin is currently in: '. $usersInfo->getLocation('Odin') . PHP_EOL; // Should equal "Norway"
+echo PHP_EOL;
+
+// 3 Get the specific time information from a DateTime Object.
+echo '-------Birthday--------' . PHP_EOL;
+echo 'Thor was born on: ' . $usersInfo->getBirthDay('Thor') . PHP_EOL; // Should be March 19, 1200
+echo PHP_EOL;
+
+// 4. Validate that you can add a new user then retrieve existing information
+echo '-------Add User--------' . PHP_EOL;
 $newUser = [
     'name' => 'Hela',
     'location' => 'Valhalla',
     'birtday' => new \DateTime('5/5/1100', new \DateTimeZone('UTC')),
 ];
-
-// 2. Validate that you can add a new user
-// and then retrieve existing information
-$userInfo->addUser($newUser);
-print_r($userInfo->getAllUserNames()); // ['Thor', 'Odin', 'Loki', 'Hela']
-
-
-// 3 BONUS. Validate that you can modifiy user information
-// Check out Assignment by reference in
-// http://php.net/manual/en/language.operators.assignment.php
-// And that it properly saves
-$userInfo->setNewLocation('Loki', 'Spain');
-print_r($userInfo->getLocation('Loki'));
+$usersInfo->addUser($newUser);
+print_r($usersInfo->getAllUserNames()); // ['Thor', 'Odin', 'Loki', 'Hela']
 echo PHP_EOL;
 
+// 5 BONUS. Validate that you can modifiy user information and that it properly saves
+echo '-------Bonus--------' . PHP_EOL;
+$usersInfo->setNewLocation('Loki', 'Spain');
+print_r($usersInfo->getLocation('Loki')); // Should be "Spain"
+echo PHP_EOL;

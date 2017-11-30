@@ -1,8 +1,6 @@
 # Havenly TQ Code Test
 
-This is the code exam for the havenly TQ team.  Please follow the instructions and submit a PR per directory.
-
-Each directory will test a different area of the
+This is the code exam for the havenly TQ team. Please follow the instructions included in each folders README, then submit a PR per directory.
 
 ## 1 - PHP Data Storage And Retrieval
 
@@ -18,4 +16,4 @@ There's a conceptual algorithm problem in the Algorithm directory. Feel free to 
 
 ### Feedback
 
-Feel free to include any feedback you have about the test in the comment sections of the PRs that you submit. 
+Feel free to include any feedback you have about the test in the comment sections of the PRs that you submit.

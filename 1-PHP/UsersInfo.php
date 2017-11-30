@@ -1,8 +1,8 @@
 <?php
 
-class UserInfo
+class UsersInfo
 {
-    const DATE_FORMAT = 'F n, Y';
+    const DATE_FORMAT = 'F j, Y';
 
     /**
      * @var array
@@ -32,9 +32,9 @@ class UserInfo
     /**
      * @param string $name
      *
-     * @return null|string
+     * @return string|null
      */
-    public function getBirthDay($name)
+    public function getLocation($name)
     {
         // TODO: implement
     }
@@ -42,9 +42,9 @@ class UserInfo
     /**
      * @param string $name
      *
-     * @return string|null
+     * @return null|string
      */
-    public function getLocation($name)
+    public function getBirthDay($name)
     {
         // TODO: implement
     }
