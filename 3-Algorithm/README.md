@@ -6,12 +6,12 @@ Algorithm design is an important part of software development.  The goal of this
 
 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
 
-What is the sum of the digits of the number 2^1000?
+What is the sum of the digits of the number 2^20?
 
 ### Solution
 
 Feel free to code this in any programming language. Just include runtime instructions for how to execute the solution.  
 
-Also feel free to use sites like http://repl.it to test/run your code.  They can be great problem solving tools. 
+Also feel free to use sites like http://repl.it to test/run your code.  They can be great problem solving tools.
 
-Also please add comments above each code chunk to explain why you made that specific decision and what it's trying to accomplish. 
+Also please add comments above each code chunk to explain why you made that specific decision and what it's trying to accomplish.
